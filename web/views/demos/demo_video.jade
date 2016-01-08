@@ -1,0 +1,9 @@
+extends ../layout
+block content
+  video(controls,preload="auto",poster="http://vjs.zencdn.net/v/oceans.png")
+    source(src="http://vjs.zencdn.net/v/oceans.mp4",type="video/mp4")
+    p='not html5'
+  script(src='/static/demos/video.js')
+
+  p.msg
+  button.check_video='检测视频状态'

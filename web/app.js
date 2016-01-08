@@ -12,6 +12,7 @@ var about_route = require('./routes/about');
 var url_route = require('./routes/url');
 var game_route = require('./routes/game');
 var test_route = require('./routes/test');
+var demo_route = require('./routes/demo');
 
 var web_lession_route = require('./routes/web_lession');
 var zuowen_lession_route = require('./routes/zuowen_lession');
@@ -38,7 +39,7 @@ app.use('/users', users_route);
 app.use('/about', about_route);
 
 app.use('/url', url_route);
-
+app.use('/demo', demo_route);
 /* lessions */
 app.use('/web', web_lession_route);
 app.use('/h5', h5_lession_route);
