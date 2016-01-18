@@ -40,11 +40,14 @@ app.use('/about', about_route);
 
 app.use('/url', url_route);
 app.use('/demo', demo_route);
+app.use('/test', test_route);
+app.use('/game', game_route);
 /* lessions */
 app.use('/web', web_lession_route);
 app.use('/h5', h5_lession_route);
 app.use('/zuowen', zuowen_lession_route);
 app.use('/nodejs', nodejs_lession_route);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
