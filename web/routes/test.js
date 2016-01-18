@@ -14,4 +14,10 @@ router.get('/2', function(req, res, next) {
   res.render('test/2',{title:'你第一眼看到哪处不同？准到爆！'});
 });
 
+router.get('/3', function(req, res, next) {
+  res.render('test/3',{title:'性格心理测试'});
+});
+
+
+
 module.exports = router;
