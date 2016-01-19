@@ -1,0 +1,24 @@
+extends ../game
+block content
+  div#page_welcome(data-role="page")
+    div(data-role="content")
+      h3=title
+      img(src='/img/game/airwar/logo.png')
+      a(href="#page_gamestart",data-transition="flip",data-role="button")='开始游戏'
+  div#page_gamestart(data-role="page")
+    div(data-role="content")
+      canvas#canvas
+  div#page_gameover(data-role="page")
+    div(data-role="content")
+      img(src='/img/game/airwar/gameover.jpg')
+      p
+        span='消灭了'
+        span#num
+        span='飞机'
+      a(href="#page_gamestart",data-transition="flip",data-role="button")='再玩一次'
+
+  div#page_gameauthor(data-role="page")
+    div(data-role="content")
+      p='游戏作者：米衙'
+      p='新浪微博 @米衙'
+      a(href="#page_playing",data-transition="flip",data-role="button")='再玩一次'

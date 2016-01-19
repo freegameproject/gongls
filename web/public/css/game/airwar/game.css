@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 640px;
+    margin: auto;
+
+}
+
+canvas {
+
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: none;
+}
+
+.gameOver {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: table;
+    height: auto;
+    line-height: 1.5em;
+    /* color: #fff; */
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.box {
+    width: 94%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 0 10px 0;
+    border-radius: 20px;
+}
+
+p {
+    width: 100%;
+}
+
+img {
+    border: none;
+    width: 100%;
+    margin: auto;
+}
+
+.box img {
+    border: none;
+    max-width: 100%;
+    width: 80%;
+}
+
+h2 {
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    display: block;
+}
+
+button {
+    text-align: center;
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    display: block;
+    border: none;
+    background: #f00;
+    font-size: 20px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+#msg {
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+}
+
+.welcome {
+    display: none;
+    background-color: #120c4a;
+    background-image: url("img/welcome.png");
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: top, top, center, bottom;
+}
+
+.welcomelogo {
+    position: fixed;
+    width: 110px;
+    right: 10px;
+    top: 10px;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: table;
+    text-align: center;
+}
+
+@keyframes play {
+    from {
+        transform: none;
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    to {
+        transform: none;
+    }
+}
+
+@-webkit-keyframes play {
+    from {
+        -webkit-transform: none;
+    }
+    50% {
+        -webkit-transform: scale(1.5);
+    }
+    to {
+        -webkit-transform: none;
+    }
+}
+
+#play {
+    position: fixed;
+    width: 90vw;
+    height: 10vw;
+    left: 0;
+    right: 0;
+    bottom: 10vw;
+    margin: auto;
+    /*animation: play 3s infinite;
+    -webkit-animation: play 1s infinite;*/
+}
+
+.author {
+    font-size: 12px;
+    text-align: center;
+}
+
+.paiming {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    width: 80%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: auto;
+    /* display: table; */
+    border-radius: 20px;
+    padding-top: 20px;
+    display: none;
+}
+
+.paiming p {
+    margin-top: 10px;
+}
+
+#replay_from_paiming {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    right: 0px;
+    /* margin: auto; */
+}
+
+.tips {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80vw;
+    padding: 10vw;
+    height: 50vw;
+    background: rgba(255, 255, 255, 0.9);
+    margin: auto;
+    display: none;
+}
+
+#page_gamestart .ui-content{
+  padding: 0;
+}
