@@ -1,5 +1,4 @@
-$(document).ready(function(){
-  //
+function gameinit(){
   gameRender = GameMaker.getGameRender();
         game = GameMaker.getGame('canvas');
         game.setPrecision(0.79);
@@ -258,17 +257,12 @@ $(document).ready(function(){
         play = function () {
             gameRender.start();
         }
-  //
-});
-
-
-$(document).on("pageshow","#page_gamestart",function(){ // 当进入页面二时
-  //game_start
+}
+function gamestart(){
   zs = 0;
   init_player();
   play();
-});
-$(document).on("pageshow","#page_gameover",function(){
-  //gameover
+}
+function gameover(){
   $('#num').text(zs);
-});
+}

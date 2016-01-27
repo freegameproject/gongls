@@ -1,3 +1,8 @@
+/*
+游戏引擎
+
+gongls
+*/
 window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 var Game = function (canvasId) {
     this.Precision = 0.7;
