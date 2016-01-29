@@ -1,0 +1,22 @@
+extends layout
+block content
+  ul
+    li.ui-block-a
+      img(src='img/index/4.jpeg')
+      span.pic_title='三亚湾 2016年1月'
+    li.ui-block-a
+      img(src='img/index/5.jpeg')
+      span.pic_title='泰国金沙岛 2016年1月'
+  h2='打个招呼吧'
+  input(name='name',placeholder='您的昵称')
+  textarea(name='text',placeholder='想说的话')
+  input(name='url',placeholder='您的个人网站地址或微博地址')
+  input(name='email',placeholder='您的电子邮件')
+  button(data-icon="check")='提交留言'
+    span.icon-send
+  div(data-role="collapsible")
+    h2='游戏'
+    a(href='/game/airwar')='airwar'
+  script(src='http://api.map.baidu.com/api?v=2.0&ak=KbtS2MR8DpR88uGhcD59zVYL')
+  script(src='/js/index_map.js')
+  script(src='/js/index.js')

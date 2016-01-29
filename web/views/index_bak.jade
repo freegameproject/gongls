@@ -1,0 +1,36 @@
+extends layout
+block content
+  p='2016-01-20～2016-01-24 泰国 曼谷 芭提雅'
+  p='2015-12-31～2016-01-02 三亚 蜈支洲岛 天涯海角 三亚湾'
+  p='2015-12-11～2015-12-13 厦门 鼓浪屿 厦大白城'
+  p='2015-4 哈尔滨'
+  p='2015年春节 厦门'
+  ul.ui-grid-b
+    li.ui-block-a
+      img(src='img/index/1.jpeg')
+      span='天津 2014年10月'
+    li.ui-block-b
+      img(src='img/index/2.jpeg')
+      span='厦门大学 黑天鹅 2015年2月'
+    li.ui-block-c
+      img(src='img/index/3.jpeg')
+      span='厦门植物园 2015年12月'
+    li.ui-block-a
+      img(src='img/index/4.jpeg')
+      span='三亚湾 2016年1月'
+    li.ui-block-b
+      img(src='img/index/5.jpeg')
+      span='泰国 2016年1月'
+  h2='打个招呼吧'
+  input(name='name',placeholder='您的昵称')
+  textarea(name='text',placeholder='想说的话')
+  input(name='url',placeholder='您的个人网站地址或微博地址')
+  input(name='email',placeholder='您的电子邮件')
+  button(data-icon="check")='提交留言'
+    span.icon-send
+  div(data-role="collapsible")
+    h2='游戏'
+    a(href='/game/airwar')='airwar'
+  script(src='http://api.map.baidu.com/api?v=2.0&ak=KbtS2MR8DpR88uGhcD59zVYL')
+  script(src='/js/index_map.js')
+  script(src='/js/index.js')

@@ -1,4 +1,4 @@
-// 百度地图API功能
+/*// 百度地图API功能
 	var map = new BMap.Map("allmap");
 	map.centerAndZoom(new BMap.Point(116.404, 39.915),6);
 	// 编写自定义函数,创建标注
@@ -37,3 +37,4 @@ addCity('三亚','三亚湾');
 addMarker(new BMap.Point(100.29,13.5));
 
 addMarker(new BMap.Point(100.87,12.92));
+*/
