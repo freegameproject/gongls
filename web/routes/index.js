@@ -2,8 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  var title='gongls';
+router.get('/', function(req, res, next) {  
   if(req.host.indexOf('zhangmani.com')!=-1){
     res.render('zhangmani/index', { title: '张玛妮' });
   }else if(req.host.indexOf('kunchongzhi.com')!=-1){
