@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
+
+var api = require('./routes/api');
 var users_route = require('./routes/users');
 var about_route = require('./routes/about');
 
@@ -21,6 +23,8 @@ var nodejs_lession_route = require('./routes/nodejs_lession');
 
 var app = express();
 
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -33,7 +37,26 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+var db=require('./package/db.js');
+app.use(function(req, res,next){
+  //get ip
+  var time=Date.parse(new Date());
+  //var ip=req.ip;
+  //black ip here ?
+  var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  console.log(req.ip);
+  db.conn();
+  db.add('view',{ip:ip,time:time},function(){
+
+  });
+
+  next();
+
+});
+
 app.use('/', routes);
+app.use('/api', api);
 app.use('/users', users_route);
 
 app.use('/about', about_route);
@@ -47,6 +70,7 @@ app.use('/web', web_lession_route);
 app.use('/h5', h5_lession_route);
 app.use('/zuowen', zuowen_lession_route);
 app.use('/nodejs', nodejs_lession_route);
+
 
 
 // catch 404 and forward to error handler
@@ -79,6 +103,7 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
 
 
 module.exports = app;

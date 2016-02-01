@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   }else if(req.host.indexOf('kunchongzhi.com')!=-1){
     res.render('kunchongzhi/index', { title: site.title.k });
   }else{
-    res.render('index', { title: site.title.g });
+    res.render('index', { title: site.title.g,viewCount:req.viewCount});
   }
 });
 
