@@ -1,14 +1,16 @@
 var express = require('express');
 var router = express.Router();
+var db=require('../package/db.js');
+var site=require('../package/site.js');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {  
+router.get('/', function(req, res, next) {
   if(req.host.indexOf('zhangmani.com')!=-1){
-    res.render('zhangmani/index', { title: '张玛妮' });
+    res.render('zhangmani/index', { title: site.title.z });
   }else if(req.host.indexOf('kunchongzhi.com')!=-1){
-    res.render('kunchongzhi/index', { title: '昆虫志' });
+    res.render('kunchongzhi/index', { title: site.title.k });
   }else{
-    res.render('index', { title: 'gongls' });
+    res.render('index', { title: site.title.g });
   }
 });
 
