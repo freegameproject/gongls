@@ -6,6 +6,8 @@ router.get('/', function(req, res, next) {
   var title='gongls';
   if(req.host.indexOf('zhangmani.com')!=-1){
     res.render('zhangmani/index', { title: '张玛妮' });
+  }else if(req.host.indexOf('kunchongzhi.com')!=-1){
+    res.render('kunchongzhi/index', { title: '昆虫志' });
   }else{
     res.render('index', { title: 'gongls' });
   }
