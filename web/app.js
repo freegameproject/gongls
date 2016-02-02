@@ -45,14 +45,7 @@ app.use(function(req, res,next){
   //var ip=req.ip;
   //black ip here ?
   var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-  console.log(req.ip);
-  db.conn();
-  db.add('view',{ip:ip,time:time},function(){
-
-  });
-
   next();
-
 });
 
 app.use('/', routes);
