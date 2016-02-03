@@ -14,14 +14,23 @@ html
         h1=title
       div(data-role="content")
         block content
+        div#postMsgPan
+          div#postMsging.hide
+            p='正在留言...'
+          div#postMsgFinish.hide
+            p='感谢您的留言'
+          div#postMsgForm
+            h2='与我联系'
+            input#postMsg_name(name='name',placeholder='您的昵称')
+            textarea#postMsg_text(name='text',placeholder='想说的话')
+            input#postMsg_url(name='url',placeholder='您的个人网站地址或微博地址')
+            input#postMsg_email(name='email',placeholder='您的电子邮件')
+            button#postMsgButton(data-icon="check")='提交留言'
       div(data-role="footer")
         p.text-center='京ICP备16001206'
         p.text-center
           span='已有 '
           span#viewCount='正在获取中...'
           span=' 人次访问'
-        script
-          | $.getJSON('/api/viewCount',{},function(x){
-          |   $('#viewCount').text(x.count);
-          | });
+      script(src='/js/layout.js')
       script(src='/js/less.min.js')

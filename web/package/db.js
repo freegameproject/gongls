@@ -6,7 +6,15 @@ mongoUrl = 'mongodb://localhost:27017/g';
 
 db={
   title:'haha',
-  conn:function(){
+  conn:function(callback,callback_err){
+    MongoClient.connect(mongoUrl, function (err, db) {
+      if(err){
+        callback_err();
+      }else{
+        callback();
+      }
+      //assert.equal(null, err);
+    });
     console.log(mongoUrl);
   },
   add:function(table,obj,callback){
@@ -15,7 +23,8 @@ db={
         db.collection(table).insertOne(obj, function (err, result) {
             assert.equal(err, null);
             //res.json(result);
-            callback();
+            //callback(result);
+            callback(result.ops[0]._id);
             db.close();
         });
     });

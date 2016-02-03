@@ -39,13 +39,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 var db=require('./package/db.js');
+
 app.use(function(req, res,next){
   //get ip
   var time=Date.parse(new Date());
   //var ip=req.ip;
   //black ip here ?
   var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-  next();
+  db.conn(function(){
+    next();
+  },function(){
+    res.send('mongodb err');
+  });
+
 });
 
 app.use('/', routes);
